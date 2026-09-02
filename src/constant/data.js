@@ -1,4 +1,3 @@
-import pullOne from "../assets/image/pulls/pull-1.png"
 import pullTwo from "../assets/image/pulls/pull-2.png"
 import pullThree from "../assets/image/pulls/pull-3.png"
 import casquette from "../assets/image/casquettes/casquette.png"
@@ -35,14 +34,6 @@ export const PRODUCTS = [
         price: 15000,
         image: tshirtBlancFreedomFace,
         isNew: true,
-    },
-    {
-        id: "obvx-hoodie-street",
-        name: "Hoodie Street",
-        category: "Vêtements",
-        price: 6200,
-        image: pullOne,
-        isNew: false,
     },
     {
         id: "obvx-t-shirt-globe",
@@ -102,7 +93,7 @@ export const PRODUCTS = [
     },
     {
         id: "obvx-bonnet-signature",
-        name: "Bonnet Signature",
+        name: "Casquette Signature",
         category: "Accessoires",
         price: 8000,
         image: casquette,
@@ -126,10 +117,10 @@ export const PRODUCTS = [
     },
     {
         id: "obvx-sac-commute",
-        name: "Sac Commute",
-        category: "Accessoires",
+        name: "Pyramid OBVX",
+        category: "Vêtements",
         price: 8000,
-        image: casquette,
+        image: tshirtBlancStreetDos,
         isNew: false,
     },
     {
