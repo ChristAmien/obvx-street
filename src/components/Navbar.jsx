@@ -4,13 +4,13 @@ import logo from "../assets/logo/logoBlack.png"
 import ShopDropdown from "./ShopDropdown"
 import { Search, ShoppingBag, UserRound, Menu, X } from "lucide-react"
 
-export const Navbar = () => {
+export const Navbar = ({ cartCount = 0 }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const closeMenu = () => setIsMenuOpen(false)
 
   return (
-    <section className="border-b border-black/10 bg-amber-100">
+    <section className="fixed inset-x-0 top-0 z-50 border-b border-black/10 bg-amber-100">
       <div className="mx-auto max-w-7xl px-4 sm:px-8">
         <nav
           className="flex min-h-20 items-center justify-between gap-4 py-4 sm:min-h-24"
@@ -67,12 +67,17 @@ export const Navbar = () => {
             </Link>
 
             <Link
-              className="transition-colors hover:text-amber-700"
+              className="relative transition-colors hover:text-amber-700"
               to="/cart"
               aria-label="Panier"
               title="Panier"
             >
               <ShoppingBag size={21} strokeWidth={1.8} aria-hidden="true" />
+              {cartCount > 0 && (
+                <span className="absolute -right-2 -top-2 flex h-5 min-w-5 items-center justify-center rounded-full bg-black px-1 text-[10px] font-semibold text-white">
+                  {cartCount}
+                </span>
+              )}
             </Link>
 
             <button
