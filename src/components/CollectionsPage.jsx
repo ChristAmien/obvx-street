@@ -6,7 +6,7 @@ const formatPrice = (price) =>
 
 const CATEGORIES = ["Tous", "Vêtements", "Accessoires"]
 
-export const CollectionsPage = () => {
+export const CollectionsPage = ({ onAddToCart }) => {
   const [activeCategory, setActiveCategory] = useState("Tous")
 
   const filteredProducts = useMemo(() => {
@@ -78,6 +78,16 @@ export const CollectionsPage = () => {
                     {product.name}
                   </h3>
                   <p className="text-sm text-black/70">{formatPrice(product.price)}</p>
+                  <button
+                    type="button"
+                    onClick={(event) => {
+                      event.preventDefault()
+                      onAddToCart(product)
+                    }}
+                    className="mt-2 w-full border border-black bg-black px-3 py-2 text-[11px] font-semibold uppercase tracking-wide text-white transition-colors hover:border-amber-700 hover:bg-amber-700"
+                  >
+                    Ajouter au panier
+                  </button>
                 </div>
               </a>
             ))}
