@@ -132,3 +132,21 @@ export const PRODUCTS = [
         isNew: true,
     },
 ]
+
+export const VALUES = [
+    {
+        number: "01",
+        title: "Identité",
+        text: "Des pièces qui parlent pour toi. OBVX transforme les codes de la rue en silhouettes reconnaissables et sincères.",
+    },
+    {
+        number: "02",
+        title: "Culture",
+        text: "Nos collections puisent dans les rencontres, les rythmes et les images qui font vivre notre quotidien.",
+    },
+    {
+        number: "03",
+        title: "Mouvement",
+        text: "Nous avançons avec celles et ceux qui créent, osent et donnent une nouvelle direction à leur génération.",
+    },
+]

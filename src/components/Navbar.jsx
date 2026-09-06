@@ -11,9 +11,9 @@ export const Navbar = ({ cartCount = 0 }) => {
 
   return (
     <section className="fixed inset-x-0 top-0 z-50 border-b border-black/10 bg-amber-100">
-      <div className="mx-auto max-w-7xl px-4 sm:px-8">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <nav
-          className="flex min-h-20 items-center justify-between gap-4 py-4 sm:min-h-24"
+          className="flex min-h-16 items-center justify-between gap-3 py-2 sm:min-h-18"
           aria-label="Navigation principale"
         >
           <Link to="/" className="flex-shrink-0" onClick={closeMenu}>
@@ -22,7 +22,7 @@ export const Navbar = ({ cartCount = 0 }) => {
               alt="OBVX"
               width={120}
               height={120}
-              className="h-auto w-[80px] object-contain sm:w-[120px]"
+              className="h-auto w-[64px] object-contain sm:w-[88px]"
             />
           </Link>
 
@@ -41,20 +41,20 @@ export const Navbar = ({ cartCount = 0 }) => {
               </Link>
             </li>
             <li>
-              <a href="#apropos" className="transition-colors hover:text-amber-700">
+              <Link to="/about" className="transition-colors hover:text-amber-700">
                 À propos
-              </a>
+              </Link>
             </li>
           </ul>
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3">
             <button
               type="button"
               className="transition-colors hover:text-amber-700"
               aria-label="Rechercher"
               title="Rechercher"
             >
-              <Search size={21} strokeWidth={1.8} aria-hidden="true" />
+              <Search size={19} strokeWidth={1.8} aria-hidden="true" />
             </button>
 
             <Link
@@ -63,7 +63,7 @@ export const Navbar = ({ cartCount = 0 }) => {
               aria-label="Mon compte"
               title="Mon compte"
             >
-              <UserRound size={21} strokeWidth={1.8} aria-hidden="true" />
+              <UserRound size={19} strokeWidth={1.8} aria-hidden="true" />
             </Link>
 
             <Link
@@ -72,7 +72,7 @@ export const Navbar = ({ cartCount = 0 }) => {
               aria-label="Panier"
               title="Panier"
             >
-              <ShoppingBag size={21} strokeWidth={1.8} aria-hidden="true" />
+              <ShoppingBag size={19} strokeWidth={1.8} aria-hidden="true" />
               {cartCount > 0 && (
                 <span className="absolute -right-2 -top-2 flex h-5 min-w-5 items-center justify-center rounded-full bg-black px-1 text-[10px] font-semibold text-white">
                   {cartCount}
@@ -88,9 +88,9 @@ export const Navbar = ({ cartCount = 0 }) => {
               aria-expanded={isMenuOpen}
             >
               {isMenuOpen ? (
-                <X size={24} strokeWidth={1.8} aria-hidden="true" />
+                <X size={22} strokeWidth={1.8} aria-hidden="true" />
               ) : (
-                <Menu size={24} strokeWidth={1.8} aria-hidden="true" />
+                <Menu size={22} strokeWidth={1.8} aria-hidden="true" />
               )}
             </button>
           </div>
@@ -124,13 +124,13 @@ export const Navbar = ({ cartCount = 0 }) => {
               </Link>
             </li>
             <li>
-              <a
-                href="#apropos"
+              <Link
+                href="/about"
                 onClick={closeMenu}
                 className="block px-2 py-3 transition-colors hover:text-amber-700"
               >
                 À propos
-              </a>
+              </Link>
             </li>
             <li>
               <Link
